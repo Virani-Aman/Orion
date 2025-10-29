@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORION (1) - CLASSIFIED MUN BRIEFING</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Special Elite Font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <style>
+        /* Set base styles: Pure Black background and a Monospace font for the terminal feel */
+        body {
+            background-color: #000000;
+            color: #FFFFFF;
+            font-family: 'Roboto Mono', Courier, monospace;
+            min-height: 100vh;
+        }
+
+        /* Define the Special Elite font for thematic headings */
+        .font-elite {
+            font-family: 'Special Elite', cursive;
+        }
+
+        /* Custom glow effect for headers and accents */
+        .text-glow {
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+        }
+
+        /* Style for text on the white button to stand out against the glow */
+        .text-glow-dark {
+            text-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Style for the classified/redacted look */
+        .classified-box {
+            border: 1px solid #FFFFFF;
+            padding: 1rem;
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+        }
+
+        /* Custom animation for initial page load - simulating data stream/boot up */
+        @keyframes boot-up {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: boot-up 0.8s ease-out both;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header - Mission Title and Navigation -->
+    <header class="bg-black border-b border-white border-opacity-50 py-4 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center fade-in">
+            <h1 class="font-elite text-3xl sm:text-4xl text-glow tracking-widest">
+                <span class="border-2 border-white px-2 py-1">ORION (1)</span>
+            </h1>
+            <nav class="hidden md:flex space-x-6 uppercase text-sm font-bold">
+                <a href="#mission" class="hover:text-gray-400 transition duration-300">MISSION BRIEF</a>
+                <a href="#assignments" class="hover:text-gray-400 transition duration-300">ASSIGNMENTS</a>
+                <a href="#deployment" class="hover:text-gray-400 transition duration-300">DEPLOYMENT</a>
+                <a href="#secure" class="hover:text-gray-400 transition duration-300">SECURE CHANNEL</a>
+            </nav>
+            <!-- Mobile Menu Placeholder (Not functional, but styled) -->
+            <button class="md:hidden text-white border border-white p-2 rounded-md">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-12">
+
+        <!-- Section 1: Top Secret Header -->
+        <section class="mb-16 fade-in" style="animation-delay: 0.1s;">
+            <div class="text-center">
+                <h2 class="font-elite text-xl sm:text-2xl mb-2 tracking-widest text-glow">
+                    [[ INITIATION PROTOCOL: ACTIVE ]]
+                </h2>
+                <p class="uppercase text-sm sm:text-base tracking-widest border-t border-b border-white py-2">
+                    CONFIDENTIAL - VesperSphere INTELLIGENCE - CLASSIFIED LEVEL A
+                </p>
+                <div class="mt-8">
+                    <!-- Date and Location in Terminal Style -->
+                    <p class="text-sm">
+                        DEPLOYMENT DATE: <span class="text-glow">[ NOV 15-16, 2025 ]</span>
+                    </p>
+                    <p class="text-sm">
+                        AREA OF OPERATION: <span class="text-glow">[ MGM University, CLOVERDALE ]</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Section: Primary Registration Button (Center of Attention) -->
+        <section class="my-20 text-center fade-in" style="animation-delay: 0.2s;">
+            <!-- NOTE: Please replace the placeholder link below with your actual Google Form URL -->
+            <a id="register-main"
+                href="https://l.instagram.com/?u=https%3A%2F%2Fforms.gle%2FEYF2K9aGz8nwsioF7%3Ffbclid%3DPAZXh0bgNhZW0CMTEAAaf_tSq3Mij2Ya28VdIZ9EpQq-JxAu6NOibaoEe-t0YSAmGUpwLh-BQwCnOjZg_aem_ojfS15mrUcDH6u2f9a3m2w&e=AT3boyyFNaliyzH8EFc1HWxsEu5YOUqjm8QcMBaBuuvd9Tz9oHI6Q16FexaZysHvRTk_Jg1stTaRURcd5gZ4hgtDi_ti2s18CdiG1bEdU8nS61ioxwZd2psTZw"
+                target="_blank"
+                class="inline-block px-12 py-5 text-2xl font-elite uppercase tracking-widest text-black bg-white border-4 border-white rounded-none transition duration-300 transform hover:scale-105 hover:bg-gray-200 shadow-xl"
+                style="box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);">
+                <span class="text-glow-dark">
+                    >> ACCESS CLASSIFIED REGISTRATION << </span>
+            </a>
+            <p class="mt-4 text-sm uppercase text-gray-400">
+                [ CLEARANCE LEVEL A REQUIRED FOR ACCESS ]
+            </p>
+        </section>
+
+        <!-- Section 2: Mission Brief -->
+        <section id="mission" class="mb-20 fade-in" style="animation-delay: 0.4s;">
+            <h2 class="font-elite text-3xl mb-8 text-glow uppercase border-b border-white pb-2">
+                // MISSION BRIEFING //
+            </h2>
+            <div class="classified-box bg-black">
+                <h3 class="font-elite text-2xl mb-4 uppercase">
+                    OPERATION: ORION (1)
+                </h3>
+                <p class="text-lg mb-4 leading-relaxed">
+                    You have been selected for a high-stakes simulation requiring utmost discretion and analytical
+                    prowess. ORION (1) is a specialized task force assembled by **VesperSphere**, designed to test your
+                    capacity for strategic negotiation, crisis management, and parliamentary procedure under pressure.
+                </p>
+                <p class="text-sm uppercase leading-loose text-gray-300">
+                    <span class="text-white font-bold">[Objective]:</span> Address geopolitical and domestic threats
+                    requiring immediate, covert response. The success of national security depends on your legislative
+                    judgment and diplomatic execution.
+                </p>
+                <div class="mt-6 p-3 border border-red-500 text-red-500 font-elite">
+                    WARNING: ALL DATA IS SENSITIVE. UNAUTHORIZED DISSEMINATION IS PROHIBITED.
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Assignments (Committees) - UPDATED WITH ALL COMMITTEES -->
+        <section id="assignments" class="mb-20 fade-in" style="animation-delay: 0.6s;">
+            <h2 class="font-elite text-3xl mb-8 text-glow uppercase border-b border-white pb-2">
+                // ASSIGNED COMMITTEES //
+            </h2>
+            <!-- Updated Grid for 7 Committees (3 columns on large, 2 on medium) -->
+            <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
+
+                <!-- 1. Lok Sabha Assignment -->
+                <div class="classified-box bg-black p-6">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="font-elite text-xl uppercase tracking-wider">
+                            LOK SABHA, INDIA
+                        </h3>
+                        <span class="text-sm text-white border border-white px-2 py-0.5 rounded-full">RAW/CBI</span>
+                    </div>
+                    <p class="text-base mb-4 italic text-gray-300">
+                        Agenda: Discussing the Political Landscape of India: Debating Electoral Reforms, the Uniform
+                        Civil Code, and the Politics of Citizenship and Religion.
+                    </p>
+                    <p class="text-sm mt-3 border-t border-white border-opacity-30 pt-3">
+                        <span class="font-bold">[EXECUTIVE OVERSIGHT]:</span>
+                        <br> Speaker: <span class="text-glow">Shri Aman P. Virani</span>
+                        <br> Deputy Speaker: <span class="text-glow">Shri Swaraj Mane</span>
+                    </p>
+                </div>
+
+                <!-- 2. UK War Cabinet Assignment (Retained with updated EB if provided, else current EB) -->
+                <div class="classified-box bg-black p-6">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="font-elite text-xl uppercase tracking-wider">
+                            UK WAR CABINET
+                        </h3>
+                        <span class="text-sm text-white border border-white px-2 py-0.5 rounded-full">MI6/GCHQ</span>
+                    </div>
+                    <p class="text-base mb-4 italic text-gray-300">
+                        Agenda: Developing a comprehensive strategy to counter transnational organized crime networks
+                        and illicit finance affecting UK sovereignty.
+                    </p>
+                    <p class="text-sm mt-3 border-t border-white border-opacity-30 pt-3">
+                        <span class="font-bold">[FOCUS AREA]:</span> Espionage and Counter-Intelligence Protocols. (EB
+                        details pending clearance.)
+                    </p>
+                </div>
+
+                <!-- 3. Historical All India Political Parties Meet -->
+                <div class="classified-box bg-black p-6">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="font-elite text-xl uppercase tracking-wider">
+                            HISTORICAL AIPPM
+                        </h3>
+                        <span class="text-sm text-white border border-white px-2 py-0.5 rounded-full">HAPPM</span>
+                    </div>
+                    <p class="text-base mb-4 italic text-gray-300">
+                        Agenda: The Emergency
+                    </p>
+                    <p class="text-sm mt-3 border-t border-white border-opacity-30 pt-3">
+                        <span class="font-bold">[EXECUTIVE OVERSIGHT]:</span>
+                        <br> Co-Chairperson: <span class="text-glow">Shri Bhargav Bidkar</span>
+                        <br> Co-Chairperson: <span class="text-glow">Smt Radhika A. Gawlikar</span>
+                    </p>
+                </div>
+
+                <!-- 4. Youth Parishad -->
+                <div class="classified-box bg-black p-6">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="font-elite text-xl uppercase tracking-wider">
+                            YOUTH PARISHAD
+                        </h3>
+                        <span class="text-sm text-white border border-white px-2 py-0.5 rounded-full">YP</span>
+                    </div>
+                    <p class="text-base mb-4 italic text-gray-300">
+                        Agenda: Matters of State Interest
+                    </p>
+                    <p class="text-sm mt-3 border-t border-white border-opacity-30 pt-3">
+                        <span class="font-bold">[EXECUTIVE OVERSIGHT]:</span>
+                        <br> Moderator: <span class="text-glow">Shri Huzaifa Muzaffar</span>
+                        <br> Deputy Moderator: <span class="text-glow">Shri Waleed Abdul Kareem</span>
+                    </p>
+                </div>
+
+                <!-- 5. United Nations Security Council (UNSC) -->
+                <div class="classified-box bg-black p-6">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="font-elite text-xl uppercase tracking-wider">
+                            UN SECURITY COUNCIL
+                        </h3>
+                        <span class="text-sm text-white border border-white px-2 py-0.5 rounded-full">UNSC</span>
+                    </div>
+                    <p class="text-base mb-4 italic text-gray-300">
+                        Agenda: Responding to the Civil War, Protecting Civilians, and Laying the Foundation for Peace
+                        in Sudan
+                    </p>
+                    <p class="text-sm mt-3 border-t border-white border-opacity-30 pt-3">
+                        <span class="font-bold">[EXECUTIVE OVERSIGHT]:</span>
+                        <br> President: <span class="text-glow">Ms Aayushi Kombde</span>
+                        <br> Vice President: <span class="text-glow">Mr Aryan Sharma</span>
+                    </p>
+                </div>
+
+                <!-- 6. United Nations Human Rights Council (UNHRC) -->
+                <div class="classified-box bg-black p-6">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="font-elite text-xl uppercase tracking-wider">
+                            UN HUMAN RIGHTS COUNCIL
+                        </h3>
+                        <span class="text-sm text-white border border-white px-2 py-0.5 rounded-full">UNHRC</span>
+                    </div>
+                    <p class="text-base mb-4 italic text-gray-300">
+                        Agenda: Addressing Human Rights Challenges in Cross-Border Conflicts with Emphasis on
+                        Protection, Accountability, and Resolution
+                    </p>
+                    <p class="text-sm mt-3 border-t border-white border-opacity-30 pt-3">
+                        <span class="font-bold">[EXECUTIVE OVERSIGHT]:</span>
+                        <br> President: <span class="text-glow">Mr Nimish S. Bangale</span>
+                        <br> Vice President: <span class="text-glow">Ms Avni Agrawal</span>
+                    </p>
+                </div>
+
+                <!-- 7. United Nations Commission on the Status of Women (UNCSW) -->
+                <div class="classified-box bg-black p-6">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="font-elite text-xl uppercase tracking-wider">
+                            UN COMMISSION ON WOMEN
+                        </h3>
+                        <span class="text-sm text-white border border-white px-2 py-0.5 rounded-full">UNCSW</span>
+                    </div>
+                    <p class="text-base mb-4 italic text-gray-300">
+                        Agenda: Safeguarding and empowering women’s rights in economic, social, and educational spheres,
+                        with special emphasis on conflict-driven zones and developing nations.
+                    </p>
+                    <p class="text-sm mt-3 border-t border-white border-opacity-30 pt-3">
+                        <span class="font-bold">[EXECUTIVE OVERSIGHT]:</span>
+                        <br> Chairperson: <span class="text-glow">Ms Nakshatra Salunke</span>
+                        <br> Vice-Chairperson: <span class="text-glow">Ms Anvi Raman</span>
+                    </p>
+                </div>
+
+                <!-- 8. International Press Corps (IPC) - Takes up the last space -->
+                <div class="classified-box bg-black p-6">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="font-elite text-xl uppercase tracking-wider">
+                            INT. PRESS CORPS
+                        </h3>
+                        <span class="text-sm text-white border border-white px-2 py-0.5 rounded-full">IPC</span>
+                    </div>
+                    <p class="text-base mb-4 italic text-gray-300">
+                        Agenda: Journalism, Photography, and Preparing the Orion (1) Dispatch
+                    </p>
+                    <p class="text-sm mt-3 border-t border-white border-opacity-30 pt-3">
+                        <span class="font-bold">[EXECUTIVE OVERSIGHT]:</span>
+                        <br> Editor-in-Chief: <span class="text-glow">Mr Yatharth N. Gawali</span>
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section 4: Deployment Details (Logistics) -->
+        <section id="deployment" class="mb-20 fade-in" style="animation-delay: 0.8s;">
+            <h2 class="font-elite text-3xl mb-8 text-glow uppercase border-b border-white pb-2">
+                // DEPLOYMENT DETAILS //
+            </h2>
+            <div class="classified-box bg-black p-6">
+                <div class="grid sm:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="font-elite text-xl uppercase mb-2">
+                            OPERATION WINDOW
+                        </h3>
+                        <p class="text-lg text-glow">
+                            NOV 15-16, 2024
+                        </p>
+                        <p class="text-sm text-gray-400 mt-2">
+                            (Two days of continuous simulation)
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="font-elite text-xl uppercase mb-2">
+                            ACCESS CLEARANCE
+                        </h3>
+                        <p class="text-lg mb-2">
+                            REGISTRATION REQUIRED
+                        </p>
+                        <!-- Removed redundant button here, directs attention to the main button at the top -->
+                        <p class="text-sm text-white font-bold uppercase">
+                            [ PRIMARY REGISTRATION BUTTON ABOVE ]
+                        </p>
+                    </div>
+                </div>
+                <div class="mt-8 border-t border-white border-opacity-50 pt-6">
+                    <h3 class="font-elite text-xl uppercase mb-2">
+                        OPERATIONAL GUIDELINES
+                    </h3>
+                    <p class="text-sm uppercase text-gray-300">
+                        Review the detailed Background Guides (BG) upon successful registration. Adherence to
+                        parliamentary and diplomatic protocol is non-negotiable. <span
+                            class="font-bold text-white">[EXPECT THE UNEXPECTED].</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Secure Channel (Contact) -->
+        <section id="secure" class="mb-12 fade-in" style="animation-delay: 1.0s;">
+            <h2 class="font-elite text-3xl mb-8 text-glow uppercase border-b border-white pb-2">
+                // SECURE CHANNEL //
+            </h2>
+            <div class="classified-box bg-black p-6">
+                <h3 class="font-elite text-xl uppercase mb-4">
+                    HQ COMMUNICATIONS
+                </h3>
+                <p class="text-base mb-4">
+                    For encrypted communications, use the following designated channels:
+                </p>
+                <ul class="space-y-3">
+                    <li class="flex items-center">
+                        <span class="text-white font-bold w-40 uppercase text-sm">SECRETARY GENERAL:</span>
+                        <span class="text-lg">Saad Aman</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-white font-bold w-40 uppercase text-sm">EMAIL CHANNELS:</span>
+                        <a href="mailto:secgen.orionone@gmail.com"
+                            class="text-sm underline hover:no-underline">secgen.orionone@gmail.com /
+                            main@vespersphere.com</a>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-white font-bold w-40 uppercase text-sm">INSTAGRAM:</span>
+                        <a href="https://www.instagram.com/orion._.one/" target="_blank"
+                            class="text-sm underline hover:no-underline">@orion._.one</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer - Classified Footer -->
+    <footer class="bg-black border-t border-white border-opacity-50 mt-12 py-6">
+        <div class="max-w-7xl mx-auto px-4 text-center text-sm uppercase text-gray-500">
+            <p>
+                DOCUMENT ACCESS TERMINATED. ALL DATA LOGGED.
+            </p>
+            <p class="mt-1 font-elite text-white text-base">
+                VESPER SPHERE INTELLIGENCE © 2024
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple JavaScript for smooth scrolling (enhancing UX)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Simple utility to add the fade-in animation once the page is interactive
+        document.addEventListener('DOMContentLoaded', () => {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach((el, index) => {
+                // Adjusting delay to account for the new section
+                el.style.animationDelay = `${0.1 + index * 0.2}s`;
+            });
+        });
+    </script>
+</body>
+
+</html>
